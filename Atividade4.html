@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrícula de aluno</title>
+</head>
+<body>
+    <form>
+        <h1>Matrícula de aluno</h1>
+            <br>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <br>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" required pattern="[a-zA-Z\s]+$">
+            <br><br>
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX"
+            title="XXX.XXX.XXX-XX" required pattern="(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})">
+        
+            <br><br>
+            <label for="dt">Data de nascimento: </label>
+            <input type="date" name="dt" id="dt" required min="1901-01-01" max="2022-02-03">
+            <br><br>
+            <label for="sexo">Sexo:</label>
+            <INPUT TYPE="radio" Name="sexo" Value="Masculino">Masculino
+            <INPUT TYPE="radio" Name="sexo" Value="Feminino">Feminino
+            <INPUT TYPE="radio" Name="sexo" Value="Outro">Outro
+            <br><br>
+            <label for="cidade">Cidade: </label>
+            <input type="text" name="cidade" id="cidade" required pattern="[a-zA-Z\s]+$">
+            <label for="states">Estado: </label>
+            <select name="states" id="states">
+                <optgroup label="Sudeste">
+                <option value="Sao Paulo">SP</option>   
+                <option value="Rio de Janeiro">RJ</option>  
+                <option value="Espirito Santo">ES</option>
+                <option value="Minas Gerais">MG</option>
+                </optgroup>
+                <optgroup label="Centro-Oeste">
+                <option value="Distrito Federal">DF</option>
+                <option value="Goias">GO</option>
+                <option value="Mato Grosso">MT</option>
+                <option value="Mato Grosso do Sul">MS</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="curso">Curso:</label>
+            <br>
+            <INPUT TYPE="radio" Name="curso" Value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas
+            <INPUT TYPE="radio" Name="curso" Value="Engenharia Mecânica">Engenharia Mecânica
+            <INPUT TYPE="radio" Name="curso" Value="Tecnologia em SIstemas para Internet">Tecnologia em Sistemas para Internet
+            <br><br>
+            <label for="opt">Disciplina(s) Optativas:</label>
+            <br>
+            <INPUT TYPE="checkbox" Name="opt" Value="Programação de Robos">Programação de Robos
+            <INPUT TYPE="checkbox" Name="opt" Value="Desenvolvimento de Inteligências Artificiais">Desenvolvimento de Inteligências Artificiais
+            <br>
+            <INPUT TYPE="checkbox" Name="opt" Value="Modelagem Computacional">Modelagem Computacional  
+            <INPUT TYPE="checkbox" Name="opt" Value="Ambientes isolados: desenvolvimento com Docker">Ambientes isolados: desenvolvimento com Docker  
+            <br><br>
+            <label for="sug">Sugestão de disciplinas futuras:</label><br>
+            <textarea id="sug" name="sug" rows="10" cols="50"></textarea>
+            <br><br>
+        </fieldset>
+        <button type="button" button style="display: block; margin: 0 auto; height:auto; width: 80px;">Enviar</button>
+    </form>
+   
+</body>
+</html>
